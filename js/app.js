@@ -103,7 +103,9 @@ function createTheCards() {
         });
 
     function restart() {
+        openCards = [];
         pairs = [];
+        timerStopPlease();
         time = 0;
         timerRestartPlease();
         turns = 0;
@@ -154,7 +156,6 @@ function createTheCards() {
     function gameOn() {
         cardGraphicsShuffled = shuffle(cardGraphics);
         createTheCards();
-        //timer();
     }
 
 gameOn();
