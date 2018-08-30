@@ -22,24 +22,28 @@ function createTheCards() {
     }
 }
     // Make the cards click-able
-   deck.addEventListener('click', e => {
+    deck.addEventListener('click', e => {
         const c = e.target;
+
+        // But, only if a card is not already open
+        if (c.classList.contains('card') && !openCards.includes(c)) {
         c.classList.add('open', 'show');
         openCards.push(c);
+        }
 
         const openCardOne = openCards[0];
         const openCardTwo = openCards[1];
 
         // "Memory Game Logic" Do they match? And if then, what?
         if (openCards.length === 2 && openCardTwo.innerHTML === openCardOne.innerHTML) {
-            pairs.push(openCards);
             openCardTwo.classList.add('match');
             openCardOne.classList.add('match');
+            pairs.push(openCards);
             movesCounter();
             starsBeGone();
             openCards = [];
             gameOver();
-            }
+        }
 
             // But, what if they don't match?
             else if (openCards.length === 2  && openCardTwo !== openCardOne ) {
@@ -71,7 +75,7 @@ function createTheCards() {
     }
 
     // Star Rating
-     function starsBeGone() {
+    function starsBeGone() {
         if (turns === 33) {
             allStars.innerHTML = '<li><i class="fa fa-star"></i></li>';
         }
@@ -82,7 +86,7 @@ function createTheCards() {
     }
 
    // Timer
-   let stopWatch = setInterval(timer, 1000);
+    let stopWatch = setInterval(timer, 1000);
 
         function timer() {
             time++;

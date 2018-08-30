@@ -106,6 +106,7 @@ h1 {
 
 .deck .card.open {
     transform: rotateY(0);
+    pointer-events: none;
     background: #02b3e4;
     cursor: default;
     pointer-events: none;
@@ -119,15 +120,15 @@ h1 {
     cursor: default;
     background: #02ccba;
     font-size: 33px; 
-    pointer-events: none;
+    pointer-events: none; 
 }
 
 .deck .card.close {
     transform: rotateY(0); 
     background: #aa7ecd;
     cursor: default;
-    pointer-events: auto;
-}
+    /*pointer-events: auto; */
+} 
 
 /*
  * Styles for the Score Panel
