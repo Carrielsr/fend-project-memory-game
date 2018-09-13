@@ -1,7 +1,8 @@
 # Memory Game:
 
 Memory Game is an easy to play card matching game for young children.
- 
+
+Click this link, https://carrielsr.github.io/fend-project-memory-game/https://carrielsr.github.io/frontend-nanodegree-arcade-game/ (or copy & paste it into your browser window), to play The Memory Game!
 
 ## To play:
 
